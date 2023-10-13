@@ -2,13 +2,14 @@
 
 namespace Runner.Core
 {
+    // Character model class
     public class Character: IEffectable, ICharacter, ITickable
     {
-        public float Speed { get; set; }
-        public MoveType MoveType { get; set; }
+        public float Speed { get; set; }  // Character's speed
+        public MoveType MoveType { get; set; }  // Character's movement type
         
-        private CharacterSettings Settings { get; }
-        private IEffectContainer EffectContainer { get; }
+        private CharacterSettings Settings { get; }  // Character settings
+        private IEffectContainer EffectContainer { get; }  // Effect container for managing effects
 
         public Character(CharacterSettings settings, IEffectContainer effectContainer)
         {
@@ -26,6 +27,7 @@ namespace Runner.Core
             }
         }
 
+        // Method to reset character properties to default values
         private void SetDefaults()
         {
             Speed = Settings.DefaultSpeed;

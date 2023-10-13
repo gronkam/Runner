@@ -3,6 +3,7 @@
 namespace Runner.Core
 {
     [CreateAssetMenu(fileName = "CharacterSettings", menuName = "Configs/Character Settings")]
+    // ScriptableObject for configuring default character settings
     public class CharacterSettings: ScriptableObject
     {
         [field: SerializeField]

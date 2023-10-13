@@ -4,21 +4,24 @@ using Zenject;
 
 namespace Runner.Renderer
 {
+    // Renders character animations and updates position every tick
     public class CharacterRenderer: MonoBehaviour, ITickable
     {
         [SerializeField] private Animator _animator;
         
-        private const string MoveTypeName = "MoveType";
-        private int MoveTypeId { get; } = Animator.StringToHash(MoveTypeName);
+        private const string MoveTypeName = "MoveType";  // Animation parameter name
+        private int MoveTypeId { get; } = Animator.StringToHash(MoveTypeName);  // Hashed parameter ID
         
         [Inject]
-        private ICharacter _character;
+        private ICharacter _character;  // Injected character interface
 
+        // Called every tick to update animations and position
         void ITickable.Tick()
         {
             UpdateAnimation();
             UpdatePosition();
 
+            // Updates character position based on speed
             void UpdatePosition()
             {
                 Vector3 pos = transform.position;
@@ -26,6 +29,7 @@ namespace Runner.Renderer
                 transform.position = pos;
             }
 
+            // Updates animation based on movement type
             void UpdateAnimation()
             {
                 int characterMoveType = (int)_character.MoveType;
