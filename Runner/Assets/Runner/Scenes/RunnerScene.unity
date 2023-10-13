@@ -432,32 +432,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -8325572263993931993, guid: 5b1f2a33b01b2c64eb55d10275f3c967, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b1f2a33b01b2c64eb55d10275f3c967, type: 3}
 --- !u!4 &1449366033 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4807941040848108566, guid: 5b1f2a33b01b2c64eb55d10275f3c967, type: 3}
   m_PrefabInstance: {fileID: 1449366032}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1449366034 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2872418724036039348, guid: 5b1f2a33b01b2c64eb55d10275f3c967, type: 3}
+--- !u!114 &1449366034 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5574125937227979103, guid: 5b1f2a33b01b2c64eb55d10275f3c967, type: 3}
   m_PrefabInstance: {fileID: 1449366032}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1449366035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1449366034}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19b2ba7669f3b5c438cb80ae4200063d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnInterval: 10
 --- !u!1 &1541087247
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db953d31f5f225d48a60292b351a4ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinSpawner: {fileID: 1449366035}
+  _coinSpawner: {fileID: 1449366034}
   _coinPrefab: {fileID: 1818681211}
   _playerPrefab: {fileID: 1693371339}
   _characterSettings: {fileID: 11400000, guid: 2a2c552747cd5a64d917b4966c272a2c, type: 2}

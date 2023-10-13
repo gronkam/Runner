@@ -2,7 +2,7 @@
 
 namespace Runner.Core
 {
-    [CreateAssetMenu(menuName = "Configs/Effects/SpeedMultiplier")]
+    [CreateAssetMenu(fileName = "SpeedMultiplier", menuName = "Configs/Effects/SpeedMultiplier")]
     public class SpeedMultiplierEffectSettings : BaseEffectSettings<SpeedMultiplierEffect>
     {
         [field: SerializeField]

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: EffectList
   m_EditorClassIdentifier: 
   <Effects>k__BackingField:
-  - {fileID: 11400000, guid: 743e451ce5fb24e47a9b1aa32ac9d250, type: 2}
-  - {fileID: 11400000, guid: 535a3731666cf974e9f3bd42fce223af, type: 2}
-  - {fileID: 11400000, guid: 9faab118daa36674691e545a9fcef3b3, type: 2}
+  - {fileID: 11400000, guid: b897e2c53bd533c44a1f9b9b07567ad7, type: 2}
+  - {fileID: 11400000, guid: 4b79193394fcc6145837e9782331e53f, type: 2}
+  - {fileID: 11400000, guid: 3858f319746483d419e4f061067ea311, type: 2}

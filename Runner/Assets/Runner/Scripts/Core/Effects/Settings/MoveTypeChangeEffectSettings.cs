@@ -2,7 +2,7 @@
 
 namespace Runner.Core
 {
-    [CreateAssetMenu(menuName = "Configs/Effects/MoveTypeChange")]
+    [CreateAssetMenu(fileName = "MoveTypeChange", menuName = "Configs/Effects/MoveTypeChange")]
     public class MoveTypeChangeEffectSettings: BaseEffectSettings<MoveTypeChangeEffect>
     {
         [field: SerializeField]
