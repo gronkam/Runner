@@ -8,8 +8,6 @@ namespace Runner.Renderer
     {
         [Inject] 
         private IEffectContainer _effectContainer;
-        [Inject] 
-        private EffectFactory _effectFactory;
 
         public Vector3 Position => transform.position;
         
@@ -18,7 +16,7 @@ namespace Runner.Renderer
             CoinRenderer coinRenderer = other.GetComponent<CoinRenderer>();
             if (coinRenderer != null)
             {
-                _effectContainer.AddEffect(_effectFactory.Create(coinRenderer.EffectSettings));
+                _effectContainer.AddEffect(coinRenderer.EffectSettings);
                 coinRenderer.Despawn();
             }
         }

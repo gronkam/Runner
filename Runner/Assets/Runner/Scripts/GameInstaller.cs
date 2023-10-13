@@ -16,20 +16,30 @@ namespace Runner
 
         public override void InstallBindings()
         {
+            //Install managers
             Container.BindInterfacesAndSelfTo<TimeManager>().AsSingle().NonLazy();
             
+            //Install settings
             Container.Bind<CharacterSettings>().FromInstance(_characterSettings).AsSingle().NonLazy();
             Container.Bind<EffectListSettings>().FromInstance(_effectList).AsSingle().NonLazy();
             
-            Container.BindInterfacesAndSelfTo<Character>().AsSingle().NonLazy();
+            //Install effects
             Container.BindInterfacesAndSelfTo<EffectFactory>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<EffectListContainer>().AsSingle().NonLazy();
             
+            //Install character
+            Container.BindInterfacesAndSelfTo<Character>().AsSingle().NonLazy();
+            
+            //Install coin pool
             Container.BindMemoryPool<CoinRenderer, CoinRenderer.Pool>()
                 .WithInitialSize(10)
                 .FromComponentInNewPrefab(_coinPrefab)
                 .UnderTransformGroup("Coins");
             
+            //Install coin spawner
             Container.BindInterfacesAndSelfTo<CoinSpawner>().FromInstance(_coinSpawner).AsSingle().NonLazy();
+            
+            //install character renderer
             Container.BindInterfacesAndSelfTo<CoinDetector>().FromComponentOn(_playerPrefab).AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<CharacterRenderer>().FromComponentOn(_playerPrefab).AsSingle().NonLazy();
         }
